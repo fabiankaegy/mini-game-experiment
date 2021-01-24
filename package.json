@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "server": "nodemon server.js",
+    "start": "wp-scripts start --output-path=public/dist --webpack-no-externals",
+    "build": "wp-scripts build --output-path=public/dist --webpack-no-externals"
   },
   "repository": {
     "type": "git",
@@ -18,8 +20,28 @@
   },
   "homepage": "https://github.com/fabiankaegy/mini-game-experiment#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "nodemon": "^2.0.7",
-    "socket.io": "^3.1.0"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "socket.io": "^3.1.0",
+    "socket.io-client": "^3.1.0"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^13.0.0",
+    "react-scripts": "^4.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
